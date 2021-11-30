@@ -1,0 +1,103 @@
+.grilla{
+    display: grid;
+    /*grid-template-columns: 33% 33% 33%;*/
+    /*grid-template-columns: 200px 100px 50px;*/
+    /*FRACTION */
+    /*grid-template-columns: 1fr 1fr 1fr 1fr; /*divide en 4 cols iguales*/
+    /*grid-template-columns: repeat(6,1fr);
+    /*VALOR MIN Y VAL MAX PARA COLUMNAS Y FILAS*/
+    grid-template-columns: repeat(6,1fr) minmax(100px,200px); /**/
+    /*grid-template-rows: minmax(100px,auto); */
+    grid-template-rows: minmax(100px,300px);
+    /*grid-template-rows: 200px 400px;*/
+    /*grid-template-rows: auto 400px;
+    /*ESPACIADO ENTRE ELEMENTOS*/
+    /*column-gap: 1em; , row-gap*/
+    gap: 1em;
+}
+
+.nested-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 100px;
+    gap: 1em;
+}
+
+.nested-grid > div {
+    border: 1px solid #000;
+    background: #f1c40f;
+    padding: 1em;
+}
+
+.grilla > div {
+    background: #ecf0f1;
+    padding: 1em;
+}
+
+.grilla > div:hover {
+    border: 1px solid #f1c40f;
+}
+
+.grid2 > div {
+    background: #ecf0f1;
+    padding: 1em;
+}
+
+.grid2 > div:hover {
+    border: 1px solid #f1c40f;
+}
+
+.grid2 {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1em;
+    grid-auto-rows: minmax(100px,auto);
+    /*organiza elementos de acuerdo al ESPACIADO del elemento*/
+    /*justify-items: center; /*start,center,end,stretch*/
+    align-items: start; /*a lo largo del espaciado de la columna: center, flex-end...*/
+
+}
+
+.grid2 > .element_1 {
+    align-self: end; /*start,center, */
+}
+
+.grid2 > .element_4 {
+    justify-self: end; /*start,center, */
+}
+
+.grid3 > div {
+    background: #ecf0f1;
+    padding: 1em;
+}
+
+.grid3 > div:hover {
+    border: 1px solid #f1c40f;
+}
+
+.grid3 {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1em;
+    grid-auto-rows: minmax(100px,auto);
+    /*organiza elementos de acuerdo al ESPACIADO del elemento*/
+    /*justify-items: center; /*start,center,end,stretch*/
+    align-items: stretch; /*a lo largo del espaciado de la columna: center, flex-end...*/
+
+}
+
+.grid3 > .element_1 {
+    /*Abarcar x blloques*/
+    grid-column: 1/3;
+}
+
+.grid3 > .element_2 {
+    /*Abarcar x blloques*/
+    grid-column: 1/3;
+    grid-row: 1/3
+}
+
+.grid3 > .element_3 {
+    /*Abarcar x blloques*/
+    grid-column: 2/4;
+}
