@@ -94,7 +94,7 @@ nav{
 
 #services > .sub_div{
   display: grid;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   grid-gap: 1.25em; /* 16px * 1.25 = 20px*/
   grid-template-columns: repeat(3, 1fr);
 }
@@ -178,6 +178,7 @@ article{
 .art-cont{
 	display: inline-block;
 	vertical-align:top;
+	padding-bottom: 1px;
 }
 
 figcaption{
