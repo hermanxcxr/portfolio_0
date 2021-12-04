@@ -268,7 +268,7 @@ footer > p > a:hover{
 
 	#portfolio > .sub_div > article {
 		display:grid;
-		grid-template-columns: 33% 66%;
+		/*grid-template-columns: 33% 66%;*/
 		grid-auto-rows: 12.5em;
 	}
 
